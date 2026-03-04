@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
     <head>
         <meta charset="UTF-8" />
@@ -15,9 +15,49 @@
         <script src="../javascript/index.js"></script>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row text-center">
-                <h1 class="display-1">A szerver fut.</h1>
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <div class="row w-50 mt-5">
+                <form id="kajaForm">
+                    <div class="mb-3">
+                        <label for="kajaNev" class="form-label">Kaja neve</label>
+                        <input type="text" class="form-control" id="kajaNev" name="kajaNev" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="kajaAr" class="form-label">Kaja ára</label>
+                        <input type="number" class="form-control" id="kajaAr" name="kajaAr" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="kajaFinomsag" class="form-label">Kaja finomsága</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="kajaFinomsag"
+                            name="kajaFinomsag"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="kajaLejarat" class="form-label">Kaja lejárata</label>
+                        <input
+                            type="date"
+                            class="form-control"
+                            id="kajaLejarat"
+                            name="kajaLejarat"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="kajaMennyiseg" class="form-label">Kaja mennyisége</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="kajaMennyiseg"
+                            name="kajaMennyiseg"
+                        />
+                    </div>
+                    <button type="button" class="btn btn-primary" id="uploadBtn">Submit</button>
+                </form>
+            </div>
+            <div class="row text-center mt-5">
+                <a href="/suloskajak">Sulós kaják</a>
             </div>
         </div>
     </body>

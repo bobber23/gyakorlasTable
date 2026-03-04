@@ -41,4 +41,50 @@ router.get('/testsql', async (request, response) => {
     }
 });
 
+router.get('/suloskajak', async (request, response) => {
+    try {
+        const selectall = await database.selectall();
+        response.status(200).json({
+            message: 'Ez a végpont működik.',
+            results: selectall
+        });
+    } catch (error) {
+        response.status(500).json({
+            message: 'Ez a végpont nem működik.'
+        });
+    }
+});
+
+router.post('/insertkaja', upload.none(), async (request, response) => {
+    try {
+        const insertSuloskaja = await database.insertSuloskaja(
+            request.body.kajaNev,
+            request.body.kajaAr,
+            request.body.kajaFinomsag,
+            request.body.kajaLejarat,
+            request.body.kajaMennyiseg
+        );
+        response.status(200).json({
+            insertSuloskaja: insertSuloskaja
+        });
+    } catch (error) {
+        response.status(500).json({
+            message: 'Ez a végpont nem működik.'
+        });
+    }
+});
+
+router.post('/deletesuloskaja', async (request, response) => {
+    try {
+        const deleteSuloskaja = await database.deleteSuloskaja(request.body.nev);
+        response.status(200).json({
+            deleteSuloskaja: deleteSuloskaja
+        });
+    } catch (error) {
+        response.status(500).json({
+            message: 'Ez a végpont nem működik.'
+        });
+    }
+});
+
 module.exports = router;

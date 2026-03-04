@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sulóskaják</title>
+        <!--!Bootstrap-->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+        <!--?Popper: dropdowns, popovers, tooltips-->
+        <script src="../bootstrap/js/popper.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <!--!CSS-->
+        <link rel="stylesheet" href="../css/index.css" />
+        <!--!JavaScript-->
+        <script src="../javascript/suloskajak.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <div class="row w-50 mt-5">
+                <table id="suloskajaTable" class="table">
+                    <thead>
+                        <tr>
+                            <th>Név</th>
+                            <th>Ár</th>
+                            <th>Finomság</th>
+                            <th>Lejárat</th>
+                            <th>Mennyiség</th>
+                        </tr>
+                    </thead>
+                    <tbody id="suloskajaTbody"></tbody>
+                </table>
+                <button type="button" class="btn btn-primary" id="deleteBtn">
+                    Sulóskaja törlése
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
